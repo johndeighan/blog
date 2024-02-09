@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ramblings... by John Deighan</title>
+    <link>/</link>
+    <description>Recent content on Ramblings... by John Deighan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, John Deighan.</copyright>
+    <lastBuildDate>Wed, 07 Feb 2024 06:54:11 -0500</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CieloScript</title>
+      <link>/cieloscript/</link>
+      <pubDate>Wed, 07 Feb 2024 06:54:11 -0500</pubDate>
+      <guid>/cieloscript/</guid>
+      <description>I want to create a new language named CieloScript that is an extension of CoffeeScript with these features:&#xA;Auto-imports and auto-install via .symbols file Statement to allow async code within sync functions multi-type HEREDOC syntax Typing syntax to allow 1) documentation, 2) assertions #include - to include files #define - to define variables END ends a file Allow additional type of quote: « (ALT+0171) » (ALT+0187) Retain JavaScript style shebang line The only for loop is for &amp;lt;item&amp;gt; in &amp;lt;iterable&amp;gt; Add a config file to allow, e.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Tue, 06 Feb 2024 07:52:54 -0500</pubDate>
+      <guid>/contact/</guid>
+      <description>John Deighan&#xA;You can email me at cieloscript@pm.me</description>
+    </item>
+    <item>
+      <title>My First Hugo Blog</title>
+      <link>/my-first-hugo-blog/</link>
+      <pubDate>Mon, 05 Feb 2024 18:45:46 -0500</pubDate>
+      <guid>/my-first-hugo-blog/</guid>
+      <description>This is my first blog post</description>
+    </item>
+  </channel>
+</rss>
