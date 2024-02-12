@@ -124,7 +124,7 @@ If everything is working ok, deploy with:
 
 ```bash
 $ git add -A
-$ git commit -m "<messaage>"
+$ git commit -m "<message>"
 $ git push
 ```
 
@@ -133,5 +133,5 @@ site, such as setting up a GitHub Actions workflow as above,
 you will need to run `git pull` before it will allow you do
 run `git push`.
 
-Your changes will now be live.
+Your changes will now be live at `https://johndeighan.github.io/blog/`.
 

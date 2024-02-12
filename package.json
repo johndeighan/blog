@@ -4,7 +4,6 @@
 	"description": "Hugo web site setup and deploy",
 	"type": "module",
 	"scripts": {
-		"newpost": "bash 'func() {bash \"hugo new blog/\"$3\".md\"}; func()'",
 		"dev": "hugo serve -D",
 		"deploy": "git add -A && git commit -m 'add new post' && git push",
 		"test": "echo \"Error: no test specified\" && exit 1"
