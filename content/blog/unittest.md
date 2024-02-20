@@ -119,3 +119,16 @@ u.equal center('abc', 4), 'abc '
 u.equal center('abc', 10), '   abc    '
 ```
 
+In addition to `u.equal`, which BTW tests for deep equality,
+i.e. you can compare the result of calling a function
+with, e.g. `[1,2,3]` or `{a:1, b:2}`, you also have these
+methods available:
+
+```text
+u.truthy <expr> - tests if <expr> is truthy
+u.falsy  <expr> - tests if <expr> is falsy
+u.like <obj1>, <obj2> - tests if <obj1> has all keys and
+   values in <obj2> (but additional keys are allowed)
+u.throws () => <code> - tests if calling the function throws an exception
+u.succeeds () => <code> - tests that calling the function doesn't throw an exception
+```
