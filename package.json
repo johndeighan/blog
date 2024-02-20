@@ -4,11 +4,19 @@
 	"description": "Hugo web site setup and deploy",
 	"type": "module",
 	"scripts": {
+		"build": "clear && npx coffee -cm -b --no-header .",
+		"test": "npm run build && npx ava ./test/*.test.js && git status",
 		"dev": "hugo serve -D",
-		"deploy": "git add -A && git commit -m 'add new post' && git push",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"deploy": "git add -A && git commit -m 'add new post' && git push"
 	},
 	"keywords": [],
 	"author": "John Deighan",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"ava": "^6.1.1",
+		"coffeescript": "^2.7.0"
+	},
+	"dependencies": {
+		"@jdeighan/base-utils": "^14.0.3"
+	}
 }

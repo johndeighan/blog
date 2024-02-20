@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "add.test.js",
+  "sourceRoot": "..\\",
+  "sources": [
+    "test\\add.test.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAiB;AAEjB,OAAA;EAAQ,CAAR;CAAA,MAAA;;AAEA,CAAC,CAAC,KAAF,CAAQ,CAAA,GAAE,CAAV,EAAa,CAAb;;AACA,CAAC,CAAC,KAAF,CAAQ,EAAA,GAAG,EAAH,GAAM,CAAd,EAAiB,EAAjB",
+  "sourcesContent": [
+    "# add.test.coffee\r\n\r\nimport {u} from '@jdeighan/base-utils/utest'\r\n\r\nu.equal 2+3, 5\r\nu.equal 12+23+4, 39\r\n"
+  ]
+}

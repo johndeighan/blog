@@ -15,6 +15,20 @@ $ git submodule add https://github.com/janraasch/hugo-bearblog.git themes/hugo-b
 Change `package.json` to:
 
 ```json
+{
+	"name": "@jdeighan/blog",
+	"version": "1.0.0",
+	"description": "Hugo web site setup and deploy",
+	"type": "module",
+	"scripts": {
+		"dev": "hugo serve -D",
+		"deploy": "git add -A && git commit -m 'add new post' && git push",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "John Deighan",
+	"license": "MIT"
+}
 ```
 
 Copy the contents of `themes/hugo-bearblog/exampleSite/hugo.toml`
