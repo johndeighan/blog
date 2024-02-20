@@ -7,7 +7,7 @@
 		"build": "clear && npx coffee -cm -b --no-header .",
 		"test": "npm run build && npx ava ./test/*.test.js && git status",
 		"dev": "hugo serve -D",
-		"deploy": "git add -A && git commit -m 'add new post' && git push"
+		"deploy": "git add -A && git commit -m \"add new post\" && git push"
 	},
 	"keywords": [],
 	"author": "John Deighan",
