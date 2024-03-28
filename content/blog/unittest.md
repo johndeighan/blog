@@ -132,3 +132,57 @@ u.like <obj1>, <obj2> - tests if <obj1> has all keys and
 u.throws () => <code> - tests if calling the function throws an exception
 u.succeeds () => <code> - tests that calling the function doesn't throw an exception
 ```
+
+method transformValue()
+-----------------------
+
+The library `@jdeighan/base-utils/utest` exports a class
+named `UnitTester`. Usually, you'll simply import either
+`u` and/or 'utest`, which are pre-built instances of
+`UnitTester`. However, you can also construct your own
+UnitTester object, then set some useful methods on it:
+
+```coffee
+import {UnitTester} from '@jdeighan/base-utils/utest'
+
+u = new UnitTester()
+u.transformValue = (str) => return parse(str)
+```
+
+Here, I've used the name `u` as my new object. Of course,
+if you also import the name `u` from `@jdeighan/base-utils/utest`
+then you'll have to use a different name.
+
+What the method `transformValue()` does is take the first
+argument to `.equal`, `.like`, `.truthy` and `.falsy` and
+apply the given transformation before performing the test.
+
+Here's an example: I have a function named `parse()` that
+takes a string as input and produces a JavaScript object.
+To test it, I did this in my unit test:
+
+```coffee
+import {parse} from '@jdeighan/peggy'
+import {u} from '@jdeighan/base-utils/utest'
+
+u.equal parse('-a'), {a: true}
+u.equal parse('-X'), {X: true}
+u.equal parse('-label=Expenses'), {label: 'Expenses'}
+u.equal parse('-title="My Budget"'), {title: 'My Budget'}
+```
+
+But, by creating my own unit tester and defining the
+`transformValue()` method on it, I can simplify that to:
+
+```coffee
+import {parse} from '@jdeighan/peggy'
+import {UnitTester} from '@jdeighan/base-utils/utest'
+
+u = new UnitTester()
+u.transformValue = (str) => return parse(str)
+
+u.equal '-a', {a: true}
+u.equal '-X', {X: true}
+u.equal '-label=Expenses', {label: 'Expenses'}
+u.equal '-title="My Budget"', {title: 'My Budget'}
+```
