@@ -1,7 +1,9 @@
 Hugo web site setup and deploy
 ==============================
 
-Use hugo-bearblog
+This README describes how I created and deployed this blog
+
+You must choose a theme. I use hugo-bearblog
 
 ```bash
 $ hugo new site blog
