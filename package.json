@@ -10,11 +10,4 @@
 	"keywords": ["hugo"],
 	"author": "John Deighan",
 	"license": "MIT",
-	"devDependencies": {
-		"ava": "^6.1.1",
-		"coffeescript": "^2.7.0"
-		},
-	"dependencies": {
-		"@jdeighan/base-utils": "^14.0.3"
-		}
 	}
