@@ -6,6 +6,7 @@ This README describes how I created and deployed this blog
 You must choose a theme. I use hugo-bearblog
 
 ```bash
+$ cd ~
 $ hugo new site blog
 $ cd blog
 $ npm init -y
@@ -18,7 +19,7 @@ Change `package.json` to:
 
 ```json
 {
-	"name": "@jdeighan/blog",
+	"name": "@<github username>/blog",
 	"version": "1.0.0",
 	"description": "Hugo web site setup and deploy",
 	"type": "module",
@@ -26,11 +27,11 @@ Change `package.json` to:
 		"dev": "hugo serve -D",
 		"deploy": "git add -A && git commit -m 'add new post' && git push",
 		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "John Deighan",
+		},
+	"keywords": ["hugo"],
+	"author": "<your name>",
 	"license": "MIT"
-}
+	}
 ```
 
 Copy the contents of `themes/hugo-bearblog/exampleSite/hugo.toml`
@@ -39,7 +40,7 @@ to `hugo.toml`
 Next, you should update these parts of your `hugo.toml` file:
 
 1. `baseURL` which should be the URL of your blog,
-	i.e. `https://johndeighan.github.io/blog/`
+	i.e. `https://<github username>.github.io/blog/`
 2. `title` - displayed at the top of your home page
 3. `author` - your name
 4. `copyright` - correct name and year
@@ -57,6 +58,9 @@ Edit the file blog/first.md. Test site with:
 ```bash
 $ hugo serve -D
 ```
+
+Then browse to the URL that's displayed,
+usually `localhost:1313`
 
 Add a new top-level page
 ------------------------
@@ -133,7 +137,7 @@ Edit the page created to contain your post in markdown format.
 Test site with:
 
 ```bash
-$ hugo serve
+$ hugo server
 ```
 
 If everything is working ok, deploy with:
@@ -149,5 +153,5 @@ site, such as setting up a GitHub Actions workflow as above,
 you will need to run `git pull` before it will allow you do
 run `git push`.
 
-Your changes will now be live at `https://johndeighan.github.io/blog/`.
+Your changes will now be live at `https://<github username>.github.io/blog/`.
 
